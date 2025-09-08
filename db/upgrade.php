@@ -19,7 +19,7 @@
  *
  * @package     paygw_pesepay
  * @category    upgrade
- * @copyright   2025 Pesepay support@pesepay.com
+ * @copyright   2025 Pesepay <support@pesepay.com>
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -31,7 +31,8 @@ defined('MOODLE_INTERNAL') || die();
  * @param int $oldversion
  * @return bool
  */
-function xmldb_paygw_pesepay_upgrade($oldversion) {
+function xmldb_paygw_pesepay_upgrade($oldversion)
+{
     global $DB;
 
     $dbman = $DB->get_manager();

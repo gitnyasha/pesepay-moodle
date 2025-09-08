@@ -19,14 +19,15 @@
  *
  * @package     paygw_pesepay
  * @category    upgrade
- * @copyright   2025 Pesepay support@pesepay.com
+ * @copyright   2025 Pesepay <support@pesepay.com>
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 /**
  * Custom code to be run on installing the plugin.
  */
-function xmldb_paygw_pesepay_install() {
+function xmldb_paygw_pesepay_install()
+{
 
     return true;
 }

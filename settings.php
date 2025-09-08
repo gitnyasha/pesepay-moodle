@@ -19,17 +19,15 @@
  *
  * @package     paygw_pesepay
  * @category    admin
- * @copyright   2025 Pesepay support@pesepay.com
+ * @copyright   2025 Pesepay <support@pesepay.com>
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-if ($hassiteconfig) {
-    $settings = new admin_settingpage('paygw_pesepay_settings', new lang_string('pluginname', 'paygw_pesepay'));
+if ($ADMIN->fulltree) {
 
-    // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedIf
-    if ($ADMIN->fulltree) {
-        // TO-DO: Define actual plugin settings page and add it to the tree - {@link https://docs.moodle.org/dev/Admin_settings}.
-    }
+    $settings->add(new admin_setting_heading('paygw_pesepay_settings', '', get_string('pluginname_desc', 'paygw_pesepay')));
+
+    \core_payment\helper::add_common_gateway_settings($settings, 'paygw_pesepay');
 }

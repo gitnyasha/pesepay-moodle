@@ -7,20 +7,29 @@
     <TABLE NAME="paygw_pesepay" COMMENT="Stores pesepay related information">
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
-        <FIELD NAME="paymentid" TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false"/>
-        <FIELD NAME="payment_status" TYPE="char" LENGTH="50" NOTNULL="true" SEQUENCE="false"/>
-        <FIELD NAME="item_name" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false"/>
-        <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
-        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
-        <FIELD NAME="amount" TYPE="char" LENGTH="12" NOTNULL="true" SEQUENCE="false"/>
-        <FIELD NAME="currency" TYPE="char" LENGTH="5" NOTNULL="true" SEQUENCE="false"/>
-        <FIELD NAME="full_name" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
-        <FIELD NAME="email_address" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
-        <FIELD NAME="merchant_id" TYPE="int" LENGTH="12" NOTNULL="true" SEQUENCE="false"/>
-        <FIELD NAME="timeupdated" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="paymentid" TYPE="int" LENGTH="10" NOTNULL="false"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0"/>
+        <FIELD NAME="component" TYPE="char" LENGTH="255" NOTNULL="true"/>
+        <FIELD NAME="paymentarea" TYPE="char" LENGTH="255" NOTNULL="true"/>
+        <FIELD NAME="itemid" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0"/>
+        <FIELD NAME="merchantref" TYPE="char" LENGTH="255" NOTNULL="true"/>
+        <FIELD NAME="reference" TYPE="char" LENGTH="255" NOTNULL="false"/>
+        <FIELD NAME="pollurl" TYPE="text" NOTNULL="false"/>
+        <FIELD NAME="amount" TYPE="number" LENGTH="15,2" NOTNULL="true" DEFAULT="0"/>
+        <FIELD NAME="currency" TYPE="char" LENGTH="3" NOTNULL="true"/>
+        <FIELD NAME="description" TYPE="text" NOTNULL="false"/>
+        <FIELD NAME="status" TYPE="char" LENGTH="50" NOTNULL="true" DEFAULT="initiated"/>
+        <FIELD NAME="rawresponse" TYPE="text" NOTNULL="false"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="false"/>
       </FIELDS>
+
       <KEYS>
         <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="idx_paymentid" TYPE="index" FIELDS="paymentid"/>
+        <KEY NAME="idx_merchantref" TYPE="unique" FIELDS="merchantref"/>
+        <KEY NAME="idx_reference" TYPE="index" FIELDS="reference"/>
+        <KEY NAME="idx_user" TYPE="index" FIELDS="userid"/>
       </KEYS>
     </TABLE>
   </TABLES>

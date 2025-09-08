@@ -19,14 +19,15 @@
  *
  * @package     paygw_pesepay
  * @category    upgrade
- * @copyright   2025 Pesepay support@pesepay.com
+ * @copyright   2025 Pesepay <support@pesepay.com>
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 /**
  * Custom uninstallation procedure.
  */
-function xmldb_paygw_pesepay_uninstall() {
+function xmldb_paygw_pesepay_uninstall()
+{
 
     return true;
 }
