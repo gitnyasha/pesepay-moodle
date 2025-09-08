@@ -15,7 +15,6 @@
         <FIELD NAME="merchantref" TYPE="char" LENGTH="255" NOTNULL="true"/>
         <FIELD NAME="reference" TYPE="char" LENGTH="255" NOTNULL="false"/>
         <FIELD NAME="pollurl" TYPE="text" NOTNULL="false"/>
-        <!-- store amount in minor units (cents) as integer to avoid XMLDB number issues -->
         <FIELD NAME="amount" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0"/>
         <FIELD NAME="currency" TYPE="char" LENGTH="3" NOTNULL="true"/>
         <FIELD NAME="description" TYPE="text" NOTNULL="false"/>
@@ -27,10 +26,6 @@
 
       <KEYS>
         <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
-        <KEY NAME="idx_paymentid" TYPE="index" FIELDS="paymentid"/>
-        <KEY NAME="idx_merchantref" TYPE="unique" FIELDS="merchantref"/>
-        <KEY NAME="idx_reference" TYPE="index" FIELDS="reference"/>
-        <KEY NAME="idx_user" TYPE="index" FIELDS="userid"/>
       </KEYS>
     </TABLE>
   </TABLES>
