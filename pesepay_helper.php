@@ -80,14 +80,12 @@ class pesepay_helper
 
         $currency = strtoupper((string) $currency);
 
-        // Create a unique merchant reference if not provided.
         if (empty($merchantreference)) {
-            // Make the merchant reference meaningful: prefix, timestamp, user
             $merchantreference = 'moodle_' . time() . '_u' . intval($user->id);
         }
 
         $returnurl = $CFG->wwwroot . '/payment/gateway/pesepay/return.php?merchantref=' . urlencode($merchantreference);
-        $resulturl = $CFG->wwwroot . '/payment/gateway/pesepay/return.php?merchantref=' . urlencode($merchantreference);
+        $resulturl = $CFG->wwwroot . '/payment/gateway/pesepay/result.php?merchantref=' . urlencode($merchantreference);
 
         $this->pesepay->returnUrl = $returnurl;
         $this->pesepay->resultUrl = $resulturl;
