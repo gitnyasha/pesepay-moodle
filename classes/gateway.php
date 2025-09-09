@@ -79,8 +79,7 @@ class gateway extends \core_payment\gateway
         array &$errors
     ): void {
         if (
-            $data->enabled &&
-            (empty($data->brandname) || empty($data->integrationid) || empty($data->encryptionkey))
+            $data->enabled && (empty($data->integrationid) || empty($data->encryptionkey))
         ) {
             $errors['enabled'] = get_string('gatewaycannotbeenabled', 'payment');
         }

@@ -26,3 +26,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Pesepay';
+$string['pluginname_desc'] = 'Pesepay payment gateway plugin for Moodle.';
+$string['encryptionkey'] = 'Encryption Key';
+$string['integrationid'] = 'Integration ID';
+$string['brandname'] = 'Pesepay';
+$string['gatewayname'] = 'Pesepay';
+$string['gatewaydescription'] = 'Pesepay is an authorised payment gateway provider for processing transactions.';
+$string['privacy:metadata'] = 'The Pesepay plugin does not store any personal data.';
