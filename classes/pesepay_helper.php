@@ -24,13 +24,13 @@
 
 namespace paygw_pesepay;
 
+use Codevirtus\Payments\Pesepay;
+
 defined('MOODLE_INTERNAL') || die();
 
 global $CFG;
-require_once($CFG->dirroot . '/payment/gateway/pesepay/.extlib/autoload.php');
 
-use moodle_url;
-use Codevirtus\Payments\Pesepay;
+require_once($CFG->dirroot . '/payment/gateway/pesepay/.extlib/autoload.php');
 
 class pesepay_helper
 {

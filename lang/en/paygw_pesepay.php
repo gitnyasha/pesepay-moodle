@@ -33,3 +33,15 @@ $string['brandname'] = 'Pesepay';
 $string['gatewayname'] = 'Pesepay';
 $string['gatewaydescription'] = 'Pesepay is an authorised payment gateway provider for processing transactions.';
 $string['privacy:metadata'] = 'The Pesepay plugin does not store any personal data.';
+$string['paymentsuccessful'] = 'Payment successful';
+$string['paymentpending'] = 'Payment pending';
+$string['paymentcancelled'] = 'Payment cancelled';
+$string['paymentfailed'] = 'Payment failed';
+$string['errnotransactionfound'] = 'No matching Pesepay transaction was found.';
+$string['errnotyourtransaction'] = 'This transaction does not belong to your account.';
+$string['errcannotverifytransaction'] = 'Cannot verify transaction: missing reference or poll URL.';
+$string['errtransactionverificationfailed'] = 'Transaction verification failed: {$a}';
+$string['errpaymentsavedfailed'] = 'Payment processing failed while saving the payment: {$a}';
+$string['errtransactioninitfailed'] = 'Failed to initiate Pesepay transaction: {$a}';
+$string['errtransactionalreadyprocessed'] = 'This transaction has already been processed.';
+
